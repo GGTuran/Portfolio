@@ -4,7 +4,7 @@ import BlogCard from "./BlogCard";
 const Blog = () => {
   const { data: BlogsData } = useGetAllBlogsQuery("");
   const blogs = BlogsData?.data;
-  console.log(blogs, "blogs");
+
   return (
     <div>
       <div>

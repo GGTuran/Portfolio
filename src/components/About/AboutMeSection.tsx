@@ -3,18 +3,21 @@ import { Link } from "react-router-dom";
 
 const AboutMeSection = () => {
   return (
-    <section className="h-screen bg-gradient-to-b from-gray-900 to-black relative">
-      <div className="container mx-auto h-full px-4 md:px-20 flex flex-col items-center justify-center space-y-8">
+    <section className="bg-gradient-to-b from-gray-900 to-black py-16 relative">
+      <div className="container mx-auto px-6 md:px-16 flex flex-col items-center space-y-6">
+        {/* Heading */}
         <motion.h2
-          className="text-center text-3xl font-semibold text-white mb-8"
+          className="text-center text-3xl md:text-4xl font-semibold text-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
           About Me
         </motion.h2>
+
+        {/* Paragraph */}
         <motion.p
-          className="text-lg text-gray-300 text-center prose prose-sm mb-8"
+          className="text-gray-300 text-center text-base md:text-lg lg:w-2/3 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -32,9 +35,15 @@ const AboutMeSection = () => {
           opportunities, enhance my skills, and contribute meaningfully to
           projects and teams.
         </motion.p>
-        <Link to="https://drive.google.com/file/d/1WNRMXEMBxS99dDrarA9wvERozGWQwbE6/view?usp=sharing">
+
+        {/* Resume Button */}
+        <Link
+          to="https://drive.google.com/file/d/1WNRMXEMBxS99dDrarA9wvERozGWQwbE6/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <motion.button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-8"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
